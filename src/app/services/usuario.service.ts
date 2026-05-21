@@ -7,7 +7,7 @@ import { Usuario } from '../models/usuario.model';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiUrl = 'http://www.bancofiandina.somee.com/api/Usuarios';
+  private apiUrl = '/api/Usuarios';
 
   constructor(private http: HttpClient) { }
 

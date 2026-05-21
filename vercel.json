@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "http://www.bancofiandina.somee.com/api/$1"
+    }
+  ]
+}

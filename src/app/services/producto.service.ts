@@ -7,7 +7,7 @@ import { Producto } from '../models/producto.model';
   providedIn: 'root'
 })
 export class ProductoService {
-  private apiUrl = 'http://www.bancofiandina.somee.com/api/Productos';
+  private apiUrl = '/api/Productos';
 
   constructor(private http: HttpClient) { }
 

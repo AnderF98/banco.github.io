@@ -7,7 +7,7 @@ import { Solicitud } from '../models/solicitud.models';
   providedIn: 'root'
 })
 export class SolicitudService {
-  private apiUrl = 'http://www.bancofiandina.somee.com/api/Solicituds';
+  private apiUrl = '/api/Solicituds';
 
   constructor(private http: HttpClient) { }
 

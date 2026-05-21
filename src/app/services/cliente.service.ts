@@ -7,7 +7,7 @@ import { Cliente } from '../models/cliente.model';
   providedIn: 'root'
 })
 export class ClienteService {
-  private apiUrl = 'http://www.bancofiandina.somee.com/api/Clientes';
+  private apiUrl = '/api/Clientes';
 
   constructor(private http: HttpClient) { }
   
