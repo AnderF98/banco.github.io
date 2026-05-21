@@ -1,0 +1,36 @@
+<h2>Nuevo Cliente</h2>
+
+<form (ngSubmit)="guardar()">
+  <div class="mb-3">
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" [(ngModel)]="cliente.nombre" name="nombre" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Cédula</label>
+    <input type="text" class="form-control" [(ngModel)]="cliente.cedula" name="cedula" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Dirección</label>
+    <input type="text" class="form-control" [(ngModel)]="cliente.direccion" name="direccion">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Teléfono</label>
+    <input type="text" class="form-control" [(ngModel)]="cliente.telefono" name="telefono">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Ingresos</label>
+    <input type="number" class="form-control" [(ngModel)]="cliente.ingresos" name="ingresos" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Correo</label>
+    <input type="email" class="form-control" [(ngModel)]="cliente.correo" name="correo">
+  </div>
+
+  <button type="submit" class="btn btn-success">Guardar</button>
+  <a routerLink="/clientes" class="btn btn-secondary ms-2">Cancelar</a>
+</form>

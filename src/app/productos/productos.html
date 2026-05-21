@@ -1,0 +1,31 @@
+<div class="mb-3">
+  <button class="btn btn-primary" (click)="irAlFormulario()">+ Nuevo Producto</button>
+</div>
+
+<h2>Listado de Productos</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Monto Máximo</th>
+      <th>Tasa Interés</th>
+      <th>Tipo Producto</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of productos">
+      <td>{{ producto.id }}</td>
+      <td>{{ producto.nombreProducto }}</td>
+      <td>{{ producto.montoMaximo | currency:'COP':'symbol-narrow' }}</td>
+      <td>{{ producto.tasaInteres }}%</td>
+      <td>{{ producto.tipoProductoId }}</td>
+      <td>
+        <button class="btn btn-warning btn-sm me-1" (click)="editarProducto(producto.id)">Editar</button>
+        <button class="btn btn-danger btn-sm" (click)="eliminarProducto(producto.id)">Eliminar</button>
+      </td>
+      </tr>
+  </tbody>
+</table>

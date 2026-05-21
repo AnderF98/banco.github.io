@@ -1,0 +1,33 @@
+<div class="mb-3">
+  <button class="btn btn-primary" (click)="irAlFormulario()">+ Nueva Solicitud</button>
+</div>
+
+<h2>Listado de Solicitudes</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Cliente</th>
+      <th>Producto</th>
+      <th>Monto</th>
+      <th>Estado</th>
+      <th>Asesor</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let solicitud of solicitudes">
+      <td>{{ solicitud.id }}</td>
+      <td>{{ getNombreCliente(solicitud.clienteId) }}</td>
+      <td>{{ getNombreProducto(solicitud.productoId) }}</td>
+      <td>{{ solicitud.montoSolicitado | currency:'COP':'symbol-narrow' }}</td>
+      <td>{{ getNombreEstado(solicitud.estadoId) }}</td>
+      <td>{{ getNombreAsesor(solicitud.asesorId) }}</td>
+      <td>
+        <button class="btn btn-warning btn-sm me-1" (click)="editarSolicitud(solicitud.id)">Editar</button>
+        <button class="btn btn-danger btn-sm" (click)="eliminarSolicitud(solicitud.id)">Eliminar</button>
+      </td>
+      </tr>
+  </tbody>
+</table>

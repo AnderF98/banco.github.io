@@ -1,0 +1,31 @@
+<button class="btn btn-primary mb-3" (click)="irAlFormulario()">+ Nuevo Cliente</button>
+
+<h2>Listado de Clientes</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Cédula</th>
+      <th>Dirección</th>
+      <th>Teléfono</th>
+      <th>Ingresos</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.nombre }}</td>
+      <td>{{ cliente.cedula }}</td>
+      <td>{{ cliente.direccion }}</td>
+      <td>{{ cliente.telefono }}</td>
+      <td>{{ cliente.ingresos | currency:'COP':'symbol-narrow' }}</td>
+      <td>
+        <button class="btn btn-warning btn-sm me-1" (click)="editarCliente(cliente.id)">Editar</button>
+        <button class="btn btn-danger btn-sm" (click)="eliminarCliente(cliente.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

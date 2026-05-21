@@ -1,0 +1,41 @@
+<h2>{{ titulo }}</h2>
+
+<form (ngSubmit)="guardar()">
+  <div class="mb-3">
+    <label class="form-label">ID Cliente</label>
+    <input type="number" class="form-control" [(ngModel)]="solicitud.clienteId" name="clienteId" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">ID Producto</label>
+    <input type="number" class="form-control" [(ngModel)]="solicitud.productoId" name="productoId" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Monto Solicitado</label>
+    <input type="number" class="form-control" [(ngModel)]="solicitud.montoSolicitado" name="montoSolicitado" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Ingresos</label>
+    <input type="number" class="form-control" [(ngModel)]="solicitud.ingresos" name="ingresos" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Egresos</label>
+    <input type="number" class="form-control" [(ngModel)]="solicitud.egresos" name="egresos" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">ID Asesor</label>
+    <input type="number" class="form-control" [(ngModel)]="solicitud.asesorId" name="asesorId" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Estado (1=Pendiente, 2=En Análisis, 3=Aprobada, 4=Rechazada)</label>
+    <input type="number" class="form-control" [(ngModel)]="solicitud.estadoId" name="estadoId" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Guardar</button>
+  <a routerLink="/solicitudes" class="btn btn-secondary ms-2">Cancelar</a>
+</form>
